@@ -20,7 +20,8 @@ classifiers = [
     "Operating System :: POSIX :: Linux"
 ]
 dependencies = [
-    "numpy<2",
+    "numpy<2 ; python_version < '3.9'",
+    "numpy>=2 ; python_version >= '3.9'",
     "scipy > 1.4.0",
     "scikit-learn >= 1.0, < 1.7",
     "sparse",
@@ -89,7 +90,7 @@ all = [
 requires = [
     "setuptools",
     "wheel",
-    "oldest-supported-numpy",
+    "numpy<3",
     "scipy",
     "cython<3" # Our native code has several incompatibilities with Cython 3
 ]
